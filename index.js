@@ -21,6 +21,7 @@ try {
       date : new Date().getTime()
     }
     fs.writeFileSync(tempDir+'//wallpie.json',JSON.stringify(data));
+    diffDays=1;
   }
 } catch(err) {
   console.error(err)

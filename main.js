@@ -40,7 +40,7 @@ app.whenReady().then(() => {
         app.quit()
       }},
     ])
-    appIcon.setToolTip('This is my application.')
+    appIcon.setToolTip('Wallpie is running in background')
     appIcon.setContextMenu(contextMenu)
     createWindow();
   })
