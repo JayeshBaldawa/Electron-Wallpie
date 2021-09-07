@@ -1,4 +1,9 @@
 const { app, BrowserWindow, Menu, Tray } = require('electron')
+const os = require("os");
+const fs = require('fs');
+const {ipcMain} = require('electron')
+
+const tempDir = os.tmpdir();
 const path = require('path')
 var AutoLaunch = require('auto-launch');
 var autoLauncher = new AutoLaunch({
@@ -25,9 +30,22 @@ function createWindow () {
       });
     
     win.setTitle('Wallpie')
-    win.setMenu(null)
-    win.loadFile('index.html')
-    win.hide();
+    try {
+    if(fs.existsSync(tempDir+'//wallpie.json'))
+    {
+      //win.hide();
+      win.loadFile('index.html')
+    }
+    else
+    {
+      win.loadFile("recommend.html")
+    }
+    }
+    catch(err) {
+      console.error(err)
+    }
+    win.setMenu(null);
+    //win.webContents.openDevTools();
   }
 
 app.whenReady().then(() => {
@@ -52,6 +70,14 @@ app.on('window-all-closed', () => {
     }
   })
 
+  ipcMain.on('close-me', (evt, arg) => {
+    win.loadFile("index.html");
+    win.hide();
+  })
+
+  ipcMain.on('close-me-1', (evt, arg) => {
+    win.close();
+  })
 
 
 // Checking if autoLaunch is enabled, if not then enabling it.

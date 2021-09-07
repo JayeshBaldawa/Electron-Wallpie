@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Wallpie</title>
+    <link rel="stylesheet" href="recommend.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src="recommend.js"></script>
+  </head>
+  <body>
+    <div>
+        <div class="text-header">
+            <h3 class="animate__bounceIn">Choose your wallpaper preferences</h3>
+        </div>
+        <div class="grid-container">
+            <div id="1" style="border: none;" class="grid-item" onclick="selectedId('Road','1')">Road</div>
+            <div id="2" style="border: none;" class="grid-item" onclick="selectedId('Nature','2')">Nature</div>
+            <div id="3" style="border: none;" class="grid-item" onclick="selectedId('Gaming','3')">Gaming</div>  
+            <div id="4" style="border: none;" class="grid-item" onclick="selectedId('Forest','4')">Forest</div>
+            <div id="5" style="border: none;" class="grid-item" onclick="selectedId('Black','5')">Black</div>
+            <div id="6" style="border: none;" class="grid-item" onclick="selectedId('Future','6')">Future</div>  
+            <div id="7" style="border: none;" class="grid-item" onclick="selectedId('Quotes','7')">Quotes</div>
+            <div id="8" style="border: none;" class="grid-item" onclick="selectedId('Waterfall','8')">Waterfall</div>
+            <div id="9" style="border: none;" class="grid-item" onclick="selectedId('Sky','9')">Sky</div>  
+          </div>
+    </div> 
+    <div id="11" style="text-align: center;color: red;"></div>
+    <div class="center">
+       <button id="10" class="button12" style="border: solid 4px red; " onclick="goNext()">Next</button>
+    </div>      
+  </body>
+</html>

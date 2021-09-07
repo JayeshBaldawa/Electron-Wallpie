@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cantata+One&display=swap');
+
+
+
+.text-header
+{
+    text-align: center;
+    font-family: 'Cinzel', serif;
+    color: white;
+}
+
+body {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 90vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+  }
+  .grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 20px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+  }
+
+  .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+  }
+
+.button12
+{
+    padding: 10px;
+    width: 80px;
+    cursor: pointer;
+    font-family: 'Cantata One', serif;
+    border-radius: 8px; 
+    font-weight: bolder;
+    letter-spacing: 2px;
+}
+
