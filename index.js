@@ -51,7 +51,7 @@ internetAvailable({
   axios.get(
     "https://api.pexels.com/v1/search?query="+topics[ Math.floor(Math.random() * topics.length)]+"&per_page=80",
     {headers: {
-        "Authorization" : "563492ad6f91700001000001b979afd1876e4e7e981ed8254ecd4002"
+        "Authorization" : "YOUR_PEXELS_API_KEY"
       }
     }
   )

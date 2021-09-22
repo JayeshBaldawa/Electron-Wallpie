@@ -33,7 +33,7 @@ function createWindow () {
     try {
     if(fs.existsSync(tempDir+'//wallpie.json'))
     {
-      //win.hide();
+      win.hide();
       win.loadFile('index.html')
     }
     else
